@@ -78,8 +78,8 @@ gulp.task('default', ['watch']);
 //gulp-concat
 //#######################################################################################
 gulp.task('concatScripts', function(){
-    return gulp.src(['app/js/bootstrap.min.js','app/js/jquery.min.js','app/js/main.js','app/js/mustache.min.js'])
-        .pipe(concatScripts('concatenated.js'))
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js','node_modules/jquery/dist/jquery.min.js'])
+        .pipe(concatScripts('main.js'))
         .pipe(browserify())
         .pipe(gulp.dest('app/js'));
 });
